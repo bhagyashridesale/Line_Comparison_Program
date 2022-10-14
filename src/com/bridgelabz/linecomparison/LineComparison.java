@@ -18,9 +18,20 @@ public class LineComparison {
         int lineLength = (int) Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
         return lineLength;
     }
-        public static void main (String[]args){
-            System.out.println("Welcome To Line Comparison");
-        int lineLength=lineLengthCal();
-            System.out.println("The length of line is: " + lineLength);
+
+    public static void checkEquality(int lineOneLength, int lineTwoLength) {
+        if (lineOneLength == lineTwoLength){
+            System.out.println("Line are Equal");
+        }
+        else {
+            System.out.println("Lines are not Equal");
+            }
+        }
+        public static void main (String[] args){
+        int lineOneLength = lineLengthCal();
+        int lineTwoLength = lineLengthCal();
+            System.out.println("The length of line 1 is: "+lineOneLength);
+            System.out.println("The length of line 2 is: "+lineTwoLength);
+            checkEquality(lineOneLength, lineTwoLength);
         }
     }
